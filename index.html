@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="menu">
+            <button
+              id="menu-controller"
+              aria-controls="links"
+              class="menu-controller"
+            >
+              <img
+                class="icon-menu"
+                src="images/icon-menu.svg"
+                alt="Hamburger menu"
+                aria-label="Hambureger Menu"
+              />
+              <img
+                class="icon-close"
+                src="images/icon-close.svg"
+                alt="Close icon"
+                aria-label="Close icon"
+              />
+            </button>
+            <img
+              src="images/logo.svg"
+              alt="logo of the website"
+              aria-label="logo of the website"
+            />
+            <ul class="links" id="links">
+              <li><a href="">Collections</a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="user">
+            <button class="cart-btn empty" aria-controls="cart">
+              <div class="items" id="items">0</div>
+              <img src="images/icon-cart.svg" alt="" />
+            </button>
+            <img class="avatar" src="images/image-avatar.png" alt="" />
+          </div>
+        </nav>
+        <div class="cart empty" id="cart">
+          <h3 class="cart-head">Cart</h3>
+          <div class="cart-body">
+            <p class="empty-message">Your cart is empty</p>
+            <div class="cart-item">
+              <img
+                class="thumbnail"
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Product Thumbnail"
+                aria-label="Product Thumbnail"
+              />
+              <div class="cart-item-info">
+                <p class="name">Fall Limited Edition Sneakers</p>
+                <p class="price">
+                  $<span class="price">125.00</span> x
+                  <span class="quantity">3</span>
+                  <span class="total-price">$375.00</span>
+                </p>
+              </div>
+              <img
+                class="delete"
+                src="images/icon-delete.svg"
+                alt="Delete Icon"
+                aria-label="Delete Icon"
+                id="delete"
+              />
+            </div>
+            <a href="#" class="checkout-btn btn">Chackout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Start Product Details Section -->
+    <div class="container product-details-container">
+      <section class="product-details">
+        <!-- Images -->
+        <div class="images">
+          <img
+            class="previous-icon"
+            src="images/icon-previous.svg"
+            alt="Previous Icon"
+            aria-label="Previous Icon To Control the Image Slider"
+            aria-controls="image-slider"
+          />
+          <img
+            class="next-icon"
+            src="images/icon-next.svg"
+            alt="Next Icon"
+            aria-label="Next Icon To Control the Image Slider"
+            aria-controls="image-slider"
+          />
+          <div class="main-image" id="image-slider">
+            <img
+              class="active"
+              src="images/image-product-1.jpg"
+              data-img="1"
+              alt="Product Image"
+              aria-label="Product Image"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              data-img="2"
+              alt="Product Image"
+              aria-label="Product Image"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              data-img="3"
+              alt="Product Image"
+              aria-label="Product Image"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              data-img="4"
+              alt="Product Image"
+              aria-label="Product Image"
+            />
+          </div>
+          <div class="thumbnails">
+            <div class="img-holder active" data-img="1">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Product Thumbnail"
+                aria-label="Product Thumbnail"
+              />
+            </div>
+            <div class="img-holder" data-img="2">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Product Thumbnail"
+                aria-label="Product Thumbnail"
+              />
+            </div>
+            <div class="img-holder" data-img="3">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Product Thumbnail"
+                aria-label="Product Thumbnail"
+              />
+            </div>
+            <div class="img-holder" data-img="4">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Product Thumbnail"
+                aria-label="Product Thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="product-info">
+          <p class="company-name">SNEAKER COMPANY</p>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p class="description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-holder">
+            <p class="price">$125.00 <span class="discount">50%</span></p>
+            <p class="old-price">$250.00</p>
+          </div>
+          <div class="to-cart">
+            <div class="quantity-holder">
+              <button id="minus">-</button>
+              <input type="text" name="" id="quantity" readonly value="1" />
+              <button id="plus">+</button>
+            </div>
+
+            <button class="btn" id="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <div class="images">
+        <img
+          src="images/icon-close-white.svg"
+          alt="Close icon"
+          aria-controls="lightbox"
+          aria-label="Icon to close the lightbox"
+          id="close-lightbox"
+        />
+        <img
+          class="previous-icon"
+          src="images/icon-previous.svg"
+          alt="Previous Icon"
+          aria-label="Previous Icon To Control the Image Slider"
+          aria-controls="lightbox-image-slider"
+        />
+        <img
+          class="next-icon"
+          src="images/icon-next.svg"
+          alt="Next Icon"
+          aria-label="Next Icon To Control the Image Slider"
+          aria-controls="lightbox image-slider"
+        />
+        <div class="main-image" id="lightbox-image-slider">
+          <img
+            class="active"
+            src="images/image-product-1.jpg"
+            data-img="1"
+            alt="Product Image"
+            aria-label="Product Image"
+          />
+          <img
+            src="images/image-product-2.jpg"
+            data-img="2"
+            alt="Product Image"
+            aria-label="Product Image"
+          />
+          <img
+            src="images/image-product-3.jpg"
+            data-img="3"
+            alt="Product Image"
+            aria-label="Product Image"
+          />
+          <img
+            src="images/image-product-4.jpg"
+            data-img="4"
+            alt="Product Image"
+            aria-label="Product Image"
+          />
+        </div>
+        <div class="thumbnails">
+          <div class="img-holder active" data-img="1">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Product Thumbnail"
+              aria-label="Product Thumbnail"
+            />
+          </div>
+          <div class="img-holder" data-img="2">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Product Thumbnail"
+              aria-label="Product Thumbnail"
+            />
+          </div>
+          <div class="img-holder" data-img="3">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Product Thumbnail"
+              aria-label="Product Thumbnail"
+            />
+          </div>
+          <div class="img-holder" data-img="4">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Product Thumbnail"
+              aria-label="Product Thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
