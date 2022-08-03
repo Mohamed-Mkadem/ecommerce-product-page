@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--ff-vietnam);
+  font-family: var(--ff-kumbh);
   transition: var(--transition);
 }
 /* Reset */
@@ -31,7 +32,7 @@ ul {
   --lightGraylishBlue: hsl(223, 64%, 98%);
   --white: hsl(0, 0%, 100%);
   --almostBlack: hsl(0, 0%, 25%);
-  --ff-vietnam: "Be Vietnam Pro", "sans-serif";
+  --ff-kumbh: "Kumbh Sans", "sans-serif";
   --fs-main: 2.95em;
   --transition: 0.4s ease-in-out;
 }
